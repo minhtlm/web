@@ -16,9 +16,12 @@
             include("modules/quanlydonhang/lietke.php");
         }elseif($t == 'chitietdonhang'&& $query == 'xemdonhang'){
             include("modules/quanlydonhang/chitietdonhang.php");
-        }elseif($t == 'quanlynguoidung' && $query == 'them'){
-            // include("modules/quanlynguoidung/them.php");
+        }elseif($t == 'quanlynguoidung' && $query == 'lietke'){
             include("modules/quanlynguoidung/lietke.php");
+        }elseif($t == 'quanlynguoidung' && $query == 'sua'){
+            include("modules/quanlynguoidung/sua.php");
+        }elseif($t == 'quanlynguoidung' && $query == 'xoa'){
+            include("modules/quanlynguoidung/xoa.php");
         }
         else{
             include("modules/dashboard.php");
