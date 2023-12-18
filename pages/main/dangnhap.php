@@ -1,14 +1,13 @@
 <?php
     if(isset($_POST['dangnhap'])){
         $uemail = $_POST['email'];
-        $upassword = md5($_POST['password']);
-        $sql = "SELECT * FROM tbl_user WHERE uemail='".$uemail."' AND upassword='".$upassword."' ";
-        $row = mysqli_query($mysqli,$sql);
-        $count = mysqli_num_rows($row);
-        $ten = mysqli_fetch_array($row);
-        if($count>0){
-            $_SESSION['dangnhap'] = $ten['uname'];
-            $_SESSION['uid'] = $ten['uid'];
+        $upassword = ($_POST['password']);
+        $sql = "SELECT * FROM tbl_user WHERE uemail='".$uemail."' ";
+        $result = mysqli_query($mysqli,$sql);
+        $row = mysqli_fetch_array($result);
+        if(password_verify($upassword, $row['upassword'])){
+            $_SESSION['dangnhap'] = $row['uname'];
+            $_SESSION['uid'] = $row['uid'];
             header('Location:index.php');
         }else{
             echo '<p style="font-size:25px; color:red">Email hoặc mật khẩu không đúng. Vui lòng đăng nhập lại</p>';

@@ -3,7 +3,7 @@
         $uname = $_POST['uname'];
         $uphone = $_POST['uphone'];
         $uemail = $_POST['uemail'];
-        $upassword = md5($_POST['upassword']);
+        $upassword = password_hash($_POST['upassword'], PASSWORD_BCRYPT);
         $uaddress = $_POST['uaddress'];
         $sql_dangky = "INSERT INTO tbl_user(uname,uphone,uemail,upassword,uaddress) VALUES ('".$uname."','".$uphone."','".$uemail."','".$upassword."','".$uaddress."')";
         $query = mysqli_query($mysqli,$sql_dangky);
