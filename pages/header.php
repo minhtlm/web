@@ -6,11 +6,8 @@
     }
 ?>
 <div class="header">
-    <div class="SmallOne" style="align-self: stretch; padding-bottom: 16px; box-shadow: 0px 1px 0px #E5E5E5 !important">
-        <div class="address" style="color: #808080; font-size: 12px;">Store Location: 59 Giai Phong, Hanoi</div>
-    </div>
     <div class="bannertop1">
-        <img src="images/bannertop.webp">
+        <img src="admincp/uploads/bannertop.webp">
     </div>
     <div class="bannertop2">
         <?php

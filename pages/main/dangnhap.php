@@ -24,7 +24,7 @@
         </tr>
         <tr>
             <td>Mật khẩu:</td>
-            <td><input type="text" name="password" ></td>
+            <td><input type="password" name="password" ></td>
         </tr>
 
     </table>

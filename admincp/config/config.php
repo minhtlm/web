@@ -1,5 +1,5 @@
 <?php
-// $mysqli = new mysqli("localhost","root","","DA");
+//$mysqli = new mysqli("localhost","root","","DA");
 $servername = "localhost";
 $username = "root";
 $password = "123";

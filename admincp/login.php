@@ -7,7 +7,6 @@
         $sql = "SELECT * FROM tbl_admin WHERE aname='".$taikhoan."' AND apassword='".$matkhau."' ";
         $row = mysqli_query($mysqli,$sql);
         $count = mysqli_num_rows($row);
-        echo($count);
         if($count>0){
             $_SESSION['dangnhapadmin'] = $taikhoan;
             header('Location:index.php');
@@ -34,11 +33,11 @@
 
         <tr>
             <td>Tên đăng nhập:</td>
-            <td><input type="text" name="tendangnhap"></td>
+            <td><input type="text" name="tendangnhap"   style="width: fit-content"></td>
         </tr>
         <tr>
             <td>Mật khẩu:</td>
-            <td><input type="text" name="matkhau"></td>
+            <td><input type="password" name="matkhau"></td>
         </tr>
         <tr>
             <td>    </td>
