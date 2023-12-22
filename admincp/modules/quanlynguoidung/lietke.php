@@ -35,8 +35,8 @@
             } ?>
         </td>
         <td>
-            <a href="?action=quanlynguoidung&query=sua&uid=<?php echo $row['uid'] ?>"><?php echo $_SESSION['sua_ustatus'] ?></a>
-            <a href="?action=quanlynguoidung&query=xoa&uid=<?php echo $row['uid'] ?>">Xóa</a>
+            <a onclick="return xacNhanSua()" href="?action=quanlynguoidung&query=sua&uid=<?php echo $row['uid'] ?>"><?php echo $_SESSION['sua_ustatus'] ?></a>
+            <a onclick="return xacNhanXoa()" href="?action=quanlynguoidung&query=xoa&uid=<?php echo $row['uid'] ?>">Xóa</a>
         </td>
     </tr>
     <?php

@@ -30,6 +30,12 @@
             include("modules/quanlydanhmuc/lietke.php");
         }elseif($t == 'quanlydanhmuc'&& $query == 'sua'){
             include("modules/quanlydanhmuc/lietke.php");
+        }elseif($t == 'quanlynguoidung'&& $query == 'lietke'){
+            include("modules/quanlynguoidung/lietke.php");
+        }elseif($t == 'quanlynguoidung'&& $query == 'sua'){
+            include("modules/quanlynguoidung/sua.php");
+        }elseif($t == 'quanlynguoidung'&& $query == 'xoa'){
+            include("modules/quanlynguoidung/xoa.php");
         }else{
             include("modules/dashboard.php");
         }       
