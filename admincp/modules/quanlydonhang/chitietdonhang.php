@@ -26,7 +26,7 @@
         <td><?php echo $row['cartcode']?></td>
         <td><?php echo $row['pid']?></td>
         <td><?php echo $row['pname']?></td>
-        <td><image width="200px" src="modules/quanlysanpham/uploads/<?php echo $row['pimage']?>"></td>
+        <td><image width="200px" src="uploads/<?php echo $row['pimage']?>"></td>
         <td><?php echo number_format($row['pprice'],0,',','.').'vnd'?></td>
         <td><?php echo $row['soluong']?></td>
         <td><?php echo number_format($thanhtien,0,',','.').'vnd' ?></td>

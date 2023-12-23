@@ -5,10 +5,15 @@
         $sql = "SELECT * FROM tbl_user WHERE uemail='".$uemail."' ";
         $result = mysqli_query($mysqli,$sql);
         $row = mysqli_fetch_array($result);
-        if(password_verify($upassword, $row['upassword'])){
-            $_SESSION['dangnhap'] = $row['uname'];
-            $_SESSION['uid'] = $row['uid'];
-            header('Location:index.php');
+        if($upassword == '') {
+            echo '<p style="font-size:25px; color:red">Email hoặc mật khẩu không đúng. Vui lòng đăng nhập lại</p>';
+        }
+        elseif($result->num_rows > 0) {
+            if(password_verify($upassword, $row['upassword'])){
+                $_SESSION['dangnhap'] = $row['uname'];
+                $_SESSION['uid'] = $row['uid'];
+                header('Location:index.php');
+            }
         }else{
             echo '<p style="font-size:25px; color:red">Email hoặc mật khẩu không đúng. Vui lòng đăng nhập lại</p>';
         }

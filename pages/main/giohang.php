@@ -19,7 +19,7 @@
     
     <tr>
         <td><?php echo $cart_pro['pname']?></td>
-        <td><image width="100px" src="admincp/modules/quanlysanpham/uploads/<?php echo $cart_pro['pimage']?>"></td>
+        <td><image width="100px" src="admincp/uploads/<?php echo $cart_pro['pimage']?>"></td>
         <td><?php echo number_format($cart_pro['pprice'],0,',','.').'vnđ'?></td>
         <td>
             <a href="pages/main/themgiohang.php?cong=<?php echo $cart_pro['pid']?>"><i class="fa fa-plus" aria-hidden="true"></i></a>
